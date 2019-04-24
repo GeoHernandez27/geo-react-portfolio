@@ -52,7 +52,6 @@ export default class App extends Component {
         const loggedIn = response.data.logged_in;
         const loggedInStatus = this.state.loggedInStatus;
 
-    
         if (loggedIn && loggedInStatus === "LOGGED_IN") {
           return loggedIn;
         } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
@@ -76,7 +75,11 @@ export default class App extends Component {
 
   authorizedPages() {
     return [
-      <Route path="/portfolio-manager" component={PortfolioManager} />
+      <Route
+        key="portfolio-manager"
+        path="/portfolio-manager"
+        component={PortfolioManager}
+      />
     ];
   }
 
@@ -85,9 +88,9 @@ export default class App extends Component {
       <div className="container">
         <Router>
           <div>
-            <NavigationContainer 
-            loggedInStatus={this.state.loggedInStatus} 
-            handleSuccessfulLogout={this.handleSuccessfulLogout}
+            <NavigationContainer
+              loggedInStatus={this.state.loggedInStatus}
+              handleSuccessfulLogout={this.handleSuccessfulLogout}
             />
 
             <Switch>
@@ -109,7 +112,7 @@ export default class App extends Component {
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPages()
                 : null}
-              
+
               <Route
                 exact
                 path="/portfolio/:slug"
