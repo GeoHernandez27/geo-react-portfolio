@@ -9,7 +9,15 @@ const PortfolioSidebarList = props => {
         </div>
         <h1 className="title">{portfolioItem.name}</h1>
         <h2>{portfolioItem.id}</h2>
-        <a onClick={() => props.handleDeleteClick(portfolioItem)}>Delete</a>
+        <a
+          onClick={() =>
+            confirm("Are you sure you want to delete? This cannot be undone...")
+              ? props.handleDeleteClick(portfolioItem)
+              : ""
+          }
+        >
+          Delete
+        </a>
       </div>
     );
   });
