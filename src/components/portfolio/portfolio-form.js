@@ -39,18 +39,18 @@ export default class PortfolioForm extends Component {
   }
 
   handleSubmit(event) {
-    axios.post(
-      "https://geohernandez.devcamp.space/portfolio/portfolio_items",
-      this.buildForm(),
-      { withCredentials: true }
-    ).then(response => {
-        console.log('response', response);
-        
-    }).catch(error => {
-        console.log('porfolio form hhandlesubmit error', error);
-        
-    })
-
+    axios
+      .post(
+        "https://geohernandez.devcamp.space/portfolio/portfolio_items",
+        this.buildForm(),
+        { withCredentials: true }
+      )
+      .then(response => {
+        console.log("response", response);
+      })
+      .catch(error => {
+        console.log("porfolio form hhandlesubmit error", error);
+      });
 
     event.preventDefault();
   }
@@ -84,13 +84,15 @@ export default class PortfolioForm extends Component {
               value={this.state.position}
               onChange={this.handleChange}
             />
-            <input
-              type="text"
+            <select
               name="category"
-              placeholder="Category"
               value={this.state.category}
               onChange={this.handleChange}
-            />
+            >
+                <option value="eCommerce">eCommerce</option>
+                <option value="Scheduling">Scheduling</option>
+                <option value="Enterprise">Enterprise</option>
+            </select>
           </div>
           <div>
             <input
