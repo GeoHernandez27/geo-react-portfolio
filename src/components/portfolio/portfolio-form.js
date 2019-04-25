@@ -9,7 +9,7 @@ export default class PortfolioForm extends Component {
       name: "",
       description: "",
       url: "",
-      category: "",
+      category: "eCommerce",
       position: "",
       thumb_image: "",
       banner_image: "",
@@ -46,7 +46,8 @@ export default class PortfolioForm extends Component {
         { withCredentials: true }
       )
       .then(response => {
-        console.log("response", response);
+          this.props.handleSuccesfulFormSubmission(response.data.portfolio_item);
+        
       })
       .catch(error => {
         console.log("porfolio form hhandlesubmit error", error);
@@ -95,7 +96,7 @@ export default class PortfolioForm extends Component {
             </select>
           </div>
           <div>
-            <input
+            <textarea
               type="text"
               name="description"
               placeholder="Description..."
