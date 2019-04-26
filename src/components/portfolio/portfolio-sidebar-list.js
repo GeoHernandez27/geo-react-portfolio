@@ -11,18 +11,28 @@ const PortfolioSidebarList = props => {
 
         <div className="text-content">
           <div className="title">{portfolioItem.name}</div>
-          <a
-            className="delete-icon"
-            onClick={() =>
-              confirm(
-                "Are you sure you want to delete? This cannot be undone..."
-              )
-                ? props.handleDeleteClick(portfolioItem)
-                : ""
-            }
-          >
-            <FontAwesomeIcon icon="trash" />
-          </a>
+
+          <div className="actions">
+            <a
+              className="action-icon"
+              onClick={() => props.handleEditClick(portfolioItem)}
+            >
+              <FontAwesomeIcon icon="edit" />
+            </a>
+
+            <a
+              className="action-icon"
+              onClick={() =>
+                confirm(
+                  "Are you sure you want to delete? This cannot be undone..."
+                )
+                  ? props.handleDeleteClick(portfolioItem)
+                  : ""
+              }
+            >
+              <FontAwesomeIcon icon="trash" />
+            </a>
+          </div>
         </div>
       </div>
     );
