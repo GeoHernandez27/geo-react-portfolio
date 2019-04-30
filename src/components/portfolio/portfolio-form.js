@@ -38,7 +38,21 @@ export default class PortfolioForm extends Component {
   }
 
   deleteImage(imageType) {
-    console.log("deleteImage", imageType);
+    axios
+      .delete(
+        `https://api.devcamp.space/portfolio/delete-portfolio-image/${
+          this.state.id
+        }?image_type=${imageType}`,
+        { withCredentials: true }
+      )
+      .then(response => {
+        this.setState({
+          [`${imageType}_url`]: ""
+        })
+      })
+      .catch(error => {
+        console.log("deleteImage Error", error);
+      });
   }
 
   componentDidUpdate() {
@@ -68,9 +82,9 @@ export default class PortfolioForm extends Component {
         editMode: true,
         apiUrl: `https://geohernandez.devcamp.space/portfolio/portfolio_items/${id}`,
         apiAction: "patch",
-        thumb_image: thumb_image_url || "",
-        banner_image: banner_image_url || "",
-        logo: logo_url || ""
+        thumb_image_url: thumb_image_url || "",
+        banner_image_url: banner_image_url || "",
+        logo_url: logo_url || ""
       });
     }
   }
@@ -221,9 +235,9 @@ export default class PortfolioForm extends Component {
         </div>
 
         <div className="image-uploaders three-column">
-          {this.state.thumb_image && this.state.editMode ? (
+          {this.state.thumb_image_url && this.state.editMode ? (
             <div className="portfolio-manager-image-wrapper">
-              <img src={this.state.thumb_image} />
+              <img src={this.state.thumb_image_url} />
 
               <div className="image-removal-link">
                 <a onClick={() => this.deleteImage("thumb_image")}>
@@ -241,9 +255,9 @@ export default class PortfolioForm extends Component {
               <div className="dz-message">Thumbnail</div>
             </DropzoneComponent>
           )}
-          {this.state.banner_image && this.state.editMode ? (
+          {this.state.banner_image_url && this.state.editMode ? (
             <div className="portfolio-manager-image-wrapper">
-              <img src={this.state.banner_image} />
+              <img src={this.state.banner_image_url} />
               <div className="image-removal-link">
                 <a onClick={() => this.deleteImage("banner_image")}>
                   Remove Image
@@ -260,13 +274,11 @@ export default class PortfolioForm extends Component {
               <div className="dz-message">Banner</div>
             </DropzoneComponent>
           )}
-          {this.state.logo && this.state.editMode ? (
+          {this.state.logo_url && this.state.editMode ? (
             <div className="portfolio-manager-image-wrapper">
-              <img src={this.state.logo} />
+              <img src={this.state.logo_url} />
               <div className="image-removal-link">
-                <a onClick={() => this.deleteImage("logo")}>
-                  Remove Image
-                </a>
+                <a onClick={() => this.deleteImage("logo")}>Remove Image</a>
               </div>
             </div>
           ) : (
