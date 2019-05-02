@@ -236,7 +236,7 @@ export default class PortfolioForm extends Component {
 
         <div className="image-uploaders three-column">
           {this.state.thumb_image_url && this.state.editMode ? (
-            <div className="portfolio-manager-image-wrapper">
+            <div className="edit-image-wrapper">
               <img src={this.state.thumb_image_url} />
 
               <div className="image-removal-link">
@@ -256,7 +256,7 @@ export default class PortfolioForm extends Component {
             </DropzoneComponent>
           )}
           {this.state.banner_image_url && this.state.editMode ? (
-            <div className="portfolio-manager-image-wrapper">
+            <div className="edit-image-wrapper">
               <img src={this.state.banner_image_url} />
               <div className="image-removal-link">
                 <a onClick={() => this.deleteImage("banner_image")}>
@@ -275,7 +275,7 @@ export default class PortfolioForm extends Component {
             </DropzoneComponent>
           )}
           {this.state.logo_url && this.state.editMode ? (
-            <div className="portfolio-manager-image-wrapper">
+            <div className="edit-image-wrapper">
               <img src={this.state.logo_url} />
               <div className="image-removal-link">
                 <a onClick={() => this.deleteImage("logo")}>Remove Image</a>
