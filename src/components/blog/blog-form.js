@@ -25,6 +25,24 @@ export default class BlogForm extends Component {
     this.djsConfig = this.djsConfig.bind(this);
     this.handleFeaturedImageDrop = this.handleFeaturedImageDrop.bind(this);
     this.featuredImageRef = React.createRef();
+
+    this.deleteImage = this.deleteImage.bind(this);
+  }
+
+  deleteImage(imageType) {
+    axios
+      .delete(
+        `https://api.devcamp.space/portfolio/delete-portfolio-blog-image/${
+          this.props.blog.id
+        }?image_type=${imageType}`,
+        { withCredentials: true }
+      )
+      .then(response => {
+        this.props.handleFeaturedImageDelete();
+      })
+      .catch(error => {
+        console.log("deleteImage Error", error);
+      });
   }
 
   componentWillMount() {
@@ -151,24 +169,25 @@ export default class BlogForm extends Component {
         </div>
 
         <div className="image-uploaders">
-        {this.props.editMode && this.props.blog.featured_image_url ? (
-          <div className="edit-image-wrapper">
-          <img src={this.props.blog.featured_image_url} />
-          <div className="image-removal-link">
-            <a >
-              Remove Image
-            </a>
-          </div>
-        </div>
-        ) : 
-          <DropzoneComponent
-            ref={this.featuredImageRef}
-            config={this.componentConfig()}
-            djsConfig={this.djsConfig()}
-            eventHandlers={this.handleFeaturedImageDrop()}
-          >
-            <div className="dz-message">Featured Image</div>
-        </DropzoneComponent> }
+          {this.props.editMode && this.props.blog.featured_image_url ? (
+            <div className="edit-image-wrapper">
+              <img src={this.props.blog.featured_image_url} />
+              <div className="image-removal-link">
+                <a onClick={() => this.deleteImage("featured_image")}>
+                  Remove Image
+                </a>
+              </div>
+            </div>
+          ) : (
+            <DropzoneComponent
+              ref={this.featuredImageRef}
+              config={this.componentConfig()}
+              djsConfig={this.djsConfig()}
+              eventHandlers={this.handleFeaturedImageDrop()}
+            >
+              <div className="dz-message">Featured Image</div>
+            </DropzoneComponent>
+          )}
         </div>
         <button className="btn">Save</button>
       </form>
