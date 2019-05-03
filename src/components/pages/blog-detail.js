@@ -95,6 +95,6 @@ export default class BlogDetail extends Component {
       }
     };
 
-    return <div className="blog-container">{contentManager()};</div>;
+    return <div className="blog-container">{contentManager()}</div>
   }
 }
