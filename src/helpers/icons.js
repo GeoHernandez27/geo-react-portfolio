@@ -1,16 +1,30 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
+  faTrash,
+  faSignOutAlt,
+  faEdit,
+  faSpinner,
+  faPlusCircle,
+  faMapMarkedAlt,
+  faPhone,
+  //faLinkedIn,
+  //faGithub,
+  faEnvelope
+} from "@fortawesome/free-solid-svg-icons";
+
+const Icons = () => {
+  return library.add(
     faTrash,
     faSignOutAlt,
     faEdit,
     faSpinner,
     faPlusCircle,
-    
-  } from "@fortawesome/free-solid-svg-icons";
+    faMapMarkedAlt,
+    faPhone,
+    //TO DO
+    //Add linkedin and Github
+    faEnvelope
+  );
+};
 
-
-  const Icons = () => {
-  return library.add(faTrash, faSignOutAlt, faEdit, faSpinner, faPlusCircle);
-  };
-
-  export default Icons;
+export default Icons;
