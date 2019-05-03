@@ -9,7 +9,8 @@ import {
   faPhone,
   //faLinkedIn,
   //faGithub,
-  faEnvelope
+  faEnvelope,
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
@@ -23,7 +24,8 @@ const Icons = () => {
     faPhone,
     //TO DO
     //Add linkedin and Github
-    faEnvelope
+    faEnvelope,
+    faLock
   );
 };
 
