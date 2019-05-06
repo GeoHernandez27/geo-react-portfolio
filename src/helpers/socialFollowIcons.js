@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SocialFollow = () => {
   return (
     <div className="social-container">
-      <a href="#" src="../static/assets/images/logos/github.svg" />
+      <a  src="../static/assets/images/logos/github.svg" />
       <a src="../static/assets/images/logos/linkedin.svg" />
       <FontAwesomeIcon icon="envelope" />
     </div>
