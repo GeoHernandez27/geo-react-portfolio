@@ -1,4 +1,9 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
+
+import { 
+  fab
+ } from '@fortawesome/free-brands-svg-icons';
+
 import {
   faTrash,
   faSignOutAlt,
@@ -22,8 +27,7 @@ const Icons = () => {
     faPlusCircle,
     faMapMarkedAlt,
     faPhone,
-    //TO DO
-    //Add linkedin and Github
+    fab,
     faEnvelope,
     faLock
   );

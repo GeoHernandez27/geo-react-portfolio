@@ -2,17 +2,22 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    color: $offwhite;
+
+    position: absolute;
+    z-index: 1;
 
     .right-side {
         a{
+            
             margin-left: 15px;
             cursor: pointer;
-            color: $teal;
+            color:white;
             transition: 0.5s ease-in-out;
             padding-left: 15px;
 
             &:hover{
-                color:$dark-teal;
+                color:$offwhite;
             }
         }
     }
@@ -37,17 +42,18 @@
             text-decoration: none;
 
             &:hover {
-                color: black;
+                color: white;
             }
         }
 
         &:hover {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid white;
         }
         
         .nav-link-active {
-            border-bottom: 1px solid black;
-            color: black;
+            border-bottom: 1px solid white;
+            color: white;
+           
             
         }
     }

@@ -1,0 +1,39 @@
+.background-image {
+    background-image: url(../../static/assets/images/background/homepage.jpg);
+    padding: 100px;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+  
+
+    .text-wrapper {
+        display: grid;
+        grid-template-columns: 1r 1fr 1fr;
+        justify-content: right;
+    
+        color:$offwhite;
+        font-size: 1.5em;
+        align-items: center;
+        align-content: center;
+
+     
+        h1,h3 {
+            margin:0;
+           
+        }
+
+        
+    }
+
+
+}
+
+.portfolioItems-header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 0px;
+}

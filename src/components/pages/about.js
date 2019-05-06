@@ -31,7 +31,7 @@ export default function() {
         <div className="contact-bullet-points">
           <div className="bullet-point-group">
             <div className="icon">
-              <FontAwesomeIcon icon="phone" />
+              <FontAwesomeIcon icon="twitter" />
             </div>
             <div className="text">555-555-5555</div>
           </div>
