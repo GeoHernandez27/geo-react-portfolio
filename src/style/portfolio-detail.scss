@@ -9,11 +9,24 @@
         box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
     }
 
+    .banner::after {
+        display: block;
+        position: absolute;
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, black 100%);
+        margin-top: -150px;
+        height: 50%;
+        width: 100%;
+        content: '';
+      }
+
     .portfolio-detail-description-wrapper {
         text-align-last: center;
         margin-top: 42px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        transform: translateY(-20px);
+        
 
         .description {
             width: 700px;

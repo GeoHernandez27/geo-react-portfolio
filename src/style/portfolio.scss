@@ -1,24 +1,27 @@
 .portfolio-items-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
-  padding: 5px 50px;
-
+  grid-column-gap: 10px;
+  
+  padding: 0 50px 50px 50px;
   margin-bottom: 100px;
 
   .portfolio-item-wrapper {
     position: relative;
 
     .portfolio-img-background {
+      
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 350px;
-      width: 80%;
-      align-content: center;
+      height: 220px;
+      width: 220px;
+
 
       border-radius: 50%;
+      margin-top: 10%;
       margin-left: 10%;
+      margin-right: 10%;
       margin-bottom: 10%;
     }
 
@@ -35,8 +38,10 @@
       padding-right: 100px;
 
       .subtitle {
-        transition: 1s ease-in-out;
+        transition: 0.5s ease-in-out;
         color: transparent;
+        transform: translateY(-15px);
+        font-size: 1.2em;
       }
     }
 
@@ -53,6 +58,7 @@
 }
 
 .image-blur {
-  transition: 1s;
-  filter: brightness(10%);
+  transition: 0.5s ease-in;
+  filter: brightness(35%);
+    
 }
