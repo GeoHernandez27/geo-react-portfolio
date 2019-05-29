@@ -1,5 +1,6 @@
 import React from "react";
 import PortfolioContainer from "../portfolio/portfolio-container";
+import SocialFollow from "../../helpers/socialFollowIcons";
 
 export default function() {
   return (
@@ -15,6 +16,7 @@ export default function() {
         </div>
 
       <PortfolioContainer />
+      <SocialFollow/>
     </div>
   );
 }

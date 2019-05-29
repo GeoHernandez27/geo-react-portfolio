@@ -1,6 +1,7 @@
 .portfolio-manager-wrapper {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding-top: 75px;
 
     .left-column {
         background-color: $offwhite;

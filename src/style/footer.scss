@@ -1,0 +1,25 @@
+.social-container {
+  display: flex;
+
+  justify-content: center;
+  margin-bottom: 50px;
+
+  .social-box {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 20px;
+
+    svg {
+      font-size: 50px;
+      color: $charcoal;
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

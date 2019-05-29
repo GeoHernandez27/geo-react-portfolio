@@ -31,9 +31,17 @@ export default function() {
         <div className="contact-bullet-points">
           <div className="bullet-point-group">
             <div className="icon">
-              <FontAwesomeIcon icon="twitter" />
+              <FontAwesomeIcon icon={["fab", "github"]} />
             </div>
-            <div className="text">555-555-5555</div>
+            <div className="text">GeoHernadez27</div>
+          </div>
+        </div>
+        <div className="contact-bullet-points">
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </div>
+            <div className="text">geo-hernandez</div>
           </div>
         </div>
         <div className="contact-bullet-points">
@@ -41,7 +49,15 @@ export default function() {
             <div className="icon">
               <FontAwesomeIcon icon="envelope" />
             </div>
-            <div className="text">test@gmail.com</div>
+            <div className="text">guillermo.hernandez0392@gmail.com</div>
+          </div>
+        </div>
+        <div className="contact-bullet-points">
+          <div className="bullet-point-group">
+            <div className="icon">
+              <FontAwesomeIcon icon="file-alt" />
+            </div>
+            <div className="text">Resume</div>
           </div>
         </div>
         <div className="contact-bullet-points">

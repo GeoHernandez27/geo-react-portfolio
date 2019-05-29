@@ -1,8 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { 
-  fab
- } from '@fortawesome/free-brands-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import {
   faTrash,
@@ -12,10 +10,9 @@ import {
   faPlusCircle,
   faMapMarkedAlt,
   faPhone,
-  //faLinkedIn,
-  //faGithub,
   faEnvelope,
-  faLock
+  faLock,
+  faFileAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
@@ -27,10 +24,10 @@ const Icons = () => {
     faPlusCircle,
     faMapMarkedAlt,
     faPhone,
-    fab,
     faEnvelope,
-    faLock
-  );
+    faLock,
+    faFileAlt,
+    fab );
 };
 
 export default Icons;
