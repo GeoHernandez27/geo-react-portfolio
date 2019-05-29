@@ -16,16 +16,14 @@ export default function() {
         image
       </div>
       <div className="right-column">
-        <h1>About text goes here...</h1>
+        <h1>“New site, who dis?”</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          auctor sapien eget iaculis dignissim. Morbi sed metus ullamcorper,
-          euismod elit in, tincidunt nisl. Nulla malesuada est arcu, nec
-          bibendum lacus viverra ut. Suspendisse potenti. Aenean felis nulla,
-          porta eget felis id, sagittis efficitur ante. Sed bibendum magna sed
-          risus tempus scelerisque.oreet, erat mauris dictum turpis, vel
-          ultricies urna turpis eget velit.
+          Hey there! Thank you for stopping by. My name is Geo Hernandez and I
+          am a design-oriented Front End Developer based out of Utah. I believe
+          that an application not only needs to look great but also be simple
+          and functional. I love meeting new people so let’s collaborate and embark on your next digital
+          adventure!
         </p>
 
         <div className="contact-bullet-points">
@@ -60,14 +58,7 @@ export default function() {
             <div className="text">Resume</div>
           </div>
         </div>
-        <div className="contact-bullet-points">
-          <div className="bullet-point-group">
-            <div className="icon">
-              <FontAwesomeIcon icon="map-marked-alt" />
-            </div>
-            <div className="text">Lehi,UT</div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
