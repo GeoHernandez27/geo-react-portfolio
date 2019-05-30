@@ -4,6 +4,19 @@
     grid-template-columns: 1fr 1fr;
     height: calc(100vh -84px);
 
+    a:hover {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        .text {
+            color: $charcoal;
+        }
+    }
+
+    
+
     .right-column {
         display: flex;
         justify-content: center;

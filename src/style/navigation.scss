@@ -37,33 +37,25 @@
         text-transform: uppercase;
         font-size: 0.9rem;
 
-
-
-
-        
-  
-
-        
-
         a {
-            color: white;
+            color: $dark-teal;
             text-decoration: none;
             transition: 0.5s ease-in-out;
             padding-bottom: 5px;
 
             &:hover {
-                color: white;
+                color: $teal;
             }
         }
 
         &:hover {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $teal;
         }
         
         .nav-link-active {
             
-            border-bottom: 1px solid white;
-            color: white;
+            border-bottom: 1px solid $teal;
+            color: $teal;
             
         }
     }

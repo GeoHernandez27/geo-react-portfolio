@@ -22,6 +22,18 @@ module.exports = {
       },
 
       {
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      },
+
+      {
         type: 'javascript/auto',
         test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader',

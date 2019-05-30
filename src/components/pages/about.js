@@ -13,7 +13,7 @@ export default function() {
           backgroundPosition: "center"
         }}
       >
-        image
+
       </div>
       <div className="right-column">
         <h1>“New site, who dis?”</h1>
@@ -26,38 +26,44 @@ export default function() {
           adventure!
         </p>
 
-        <div className="contact-bullet-points">
+        <a className="contact-bullet-points" 
+        target="blank" href="https://github.com/GeoHernandez27">
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon={["fab", "github"]} />
             </div>
             <div className="text">GeoHernadez27</div>
           </div>
-        </div>
-        <div className="contact-bullet-points">
+        </a>
+        <a className="contact-bullet-points"
+        target="blank" href="https://www.linkedin.com/in/geo-hernandez">
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon={["fab", "linkedin"]} />
             </div>
             <div className="text">geo-hernandez</div>
           </div>
-        </div>
-        <div className="contact-bullet-points">
+        </a>
+        <a className="contact-bullet-points"
+        href="mailto:guillermo.hernandez0392@gmail.com" >
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="envelope" />
             </div>
             <div className="text">guillermo.hernandez0392@gmail.com</div>
           </div>
-        </div>
-        <div className="contact-bullet-points">
+        </a>
+        <a className="contact-bullet-points" 
+        href='https://docs.google.com/document/d/e/2PACX-1vST4hSFsOTHKqHgIPRdDfwW61OApispMBc_4C_rUexKkqCVJYUMMoifkqPShh7FkA2OrSGj8sQtSMQU/pub'
+        target='_blank'
+        >
           <div className="bullet-point-group">
             <div className="icon">
               <FontAwesomeIcon icon="file-alt" />
             </div>
             <div className="text">Resume</div>
           </div>
-        </div>
+        </a>
         
       </div>
     </div>
