@@ -57,3 +57,21 @@
         }
     }
 }
+
+@media (max-width: 415px) {
+    
+    .portfolio-detail-wrapper {
+        .portfolio-detail-description-wrapper {
+            text-align-last: left;
+            padding: 20px;
+
+            .description {
+                width: 700px;
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+}
