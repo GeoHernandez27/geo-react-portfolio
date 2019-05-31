@@ -33,3 +33,47 @@
   padding-top: 20px;
   margin-bottom: 0px;
 }
+
+@media (max-width: 415px) {
+  .background-image {
+    display: flex;
+    background-image: url(../../static/assets/images/background/homepage.jpg);
+  
+    padding: 50px;
+    height: 100vh;
+    max-width: 415px;
+    // margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+  
+    position: relative;
+  
+    .text-wrapper {
+      display: grid;
+      grid-template-columns: 1r 1fr 1fr;
+      justify-content: left;
+
+  
+      color: $offwhite;
+      font-size: 1.5em;
+      align-items: center;
+      align-content: flex-start;
+  
+      h1,
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+  
+  .portfolioItems-header-wrapper {
+    display: grid;
+    // width: 450px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+  }
+}

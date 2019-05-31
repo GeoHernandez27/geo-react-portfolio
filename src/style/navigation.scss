@@ -1,62 +1,110 @@
 .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  color: $offwhite;
+
+  position: absolute;
+  z-index: 1;
+
+  .right-side {
+    a {
+      margin-left: 15px;
+      cursor: pointer;
+      color: white;
+      transition: 0.5s ease-in-out;
+      padding-left: 15px;
+
+      &:hover {
+        color: $offwhite;
+      }
+    }
+  }
+
+  .left-side {
     display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    color: $offwhite;
+  }
 
-    position: absolute;
-    z-index: 1;
+  .nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: 0.5s ease-in-out;
 
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 
+    a {
+      color: $dark-teal;
+      text-decoration: none;
+      transition: 0.5s ease-in-out;
+      padding-bottom: 5px;
 
-    .right-side {
-        a{
-            
-            margin-left: 15px;
-            cursor: pointer;
-            color:white;
-            transition: 0.5s ease-in-out;
-            padding-left: 15px;
-
-            &:hover{
-                color:$offwhite;
-            }
-        }
+      &:hover {
+        color: $teal;
+      }
     }
 
+    &:hover {
+      border-bottom: 1px solid $teal;
+    }
+
+    .nav-link-active {
+      border-bottom: 1px solid $teal;
+      color: $teal;
+    }
+  }
+
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    width: 26px;
+
+    display: none;
+  }
+
+  #toggle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .nav-wrapper {
+    padding: 0;
+
+    flex-direction: column;
+
+    display: flex;
+    transform: translatex(350px);
+
+    label {
+      display: block;
+      cursor: pointer;
+      transform: translateX(20px);
+      color: $teal;
+
+    }
     .left-side {
-        display: flex;
-    }
+      text-align: right;
+      width: 100%;
+      display: none;
+      a {
+        display: block;
 
-    .nav-link-wrapper {
-        height: 22px;
-        border-bottom: 1px solid transparent;
+        color: $charcoal;
+        text-decoration: none;
         transition: 0.5s ease-in-out;
-
-        margin-right: 20px;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-
-        a {
-            color: $dark-teal;
-            text-decoration: none;
-            transition: 0.5s ease-in-out;
-            padding-bottom: 5px;
-
-            &:hover {
-                color: $teal;
-            }
-        }
+        padding-bottom: 5px;
 
         &:hover {
-            border-bottom: 1px solid $teal;
+          color: $teal;
         }
-        
-        .nav-link-active {
-            
-            border-bottom: 1px solid $teal;
-            color: $teal;
-            
-        }
+      }
     }
+
+    #toggle:checked + .left-side {
+      display: block;
+    }
+  }
 }

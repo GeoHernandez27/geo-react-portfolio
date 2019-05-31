@@ -12,7 +12,8 @@ import {
   faPhone,
   faEnvelope,
   faLock,
-  faFileAlt
+  faFileAlt,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
@@ -27,6 +28,7 @@ const Icons = () => {
     faEnvelope,
     faLock,
     faFileAlt,
+    faBars,
     fab );
 };
 
