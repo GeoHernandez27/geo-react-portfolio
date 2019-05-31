@@ -16,7 +16,7 @@ export default function() {
 
       </div>
       <div className="right-column">
-        <h1>“New site, who dis?”</h1>
+        <h1 className='header-title'>“New site, who dis?”</h1>
 
         <p>
           Hey there! Thank you for stopping by. My name is Geo Hernandez and I

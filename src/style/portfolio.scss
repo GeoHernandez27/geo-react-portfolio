@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
-  
+
   padding: 0 50px 50px 50px;
   margin-bottom: 100px;
 
@@ -10,13 +10,11 @@
     position: relative;
 
     .portfolio-img-background {
-      
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 220px;
       width: 220px;
-
 
       border-radius: 50%;
       margin-top: 10%;
@@ -60,71 +58,33 @@
 .image-blur {
   transition: 0.5s ease-in;
   filter: brightness(35%);
-    
 }
 
 @media (max-width: 415px) {
   .portfolio-items-wrapper {
     display: flex;
     flex-wrap: wrap;
-    max-width: 375px;
+    max-width: 415px;
 
     .portfolio-item-wrapper {
       position: relative;
 
-  
       .portfolio-img-background {
-        
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 220px;
-        width: 220px;
-        padding-left: 15px;
-  
-        border-radius: 50%;
-        margin-top: 10%;
+        transform: translateX(22%);
+
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 10%;
       }
-  
-      .img-text-wrapper {
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        height: 100%;
-        text-align: center;
-        padding-left: 35%;
 
-  
-        .subtitle {
-          transition: 0.5s ease-in-out;
-          color: transparent;
-          transform: translateY(-15px);
-          font-size: 1.2em;
-        }
+      .img-text-wrapper {
+        padding-left: 55%;
       }
-  
-      .img-text-wrapper:hover .subtitle {
-        color: $offwhite;
-        font-weight: 400;
-      }
-  
+
+
       .logo-wrapper img {
         width: 50%;
         margin-bottom: 20px;
       }
     }
   }
-  
-  .image-blur {
-    transition: 0.5s ease-in;
-    filter: brightness(35%);
-      
-  }
-  
 }

@@ -57,3 +57,31 @@
 
     
 }
+
+@media (max-width: 415px) {
+    .content-page-wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: [profile-s] 1fr [profile-e bio-s] 300px [bio-e contact-s] 1fr [contact-e] ;
+
+
+    
+        .left-column {
+            grid-row: profile-s/profile-e;
+            transform: translateY(-70px);
+            height: 100vh;
+        }
+    
+        .right-column {
+            grid-row: bio-s/bio-e;
+
+
+        }
+
+
+        
+    }
+    
+}
