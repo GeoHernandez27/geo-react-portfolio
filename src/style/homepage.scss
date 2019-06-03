@@ -10,14 +10,15 @@
   position: relative;
 
   .text-wrapper {
-    display: grid;
-    grid-template-columns: 1r 1fr 1fr;
-    justify-content: right;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+
 
     color: $offwhite;
     font-size: 1.5em;
-    align-items: center;
-    align-content: center;
+
 
     h1,
     h3 {

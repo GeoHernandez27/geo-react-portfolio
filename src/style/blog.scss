@@ -4,9 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    // padding-top: 83px;
-    // padding-bottom: 50px;
+    position: fixed;
+    width: 100vw;
     padding: 83px 40px 40px 50px;
    
 
@@ -76,13 +75,13 @@
   
 }
 
-@media (max-width: 415px){
+@media (max-width: 600px){
     
 .blog-container {
 
     display: grid;
-    grid-column: 10px [s] 300px [e] 10px;
-    width: 300px;
+    grid-column: 10px [s] 100vw [e] 10px;
+    width: 100vw;
     align-items: center;
     justify-items: center;
     position: relative;

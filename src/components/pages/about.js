@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import profilePicture from "../../../static/assets/images/bio/testImage.jpg";
+import profilePicture from "../../../static/assets/images/bio/ProfilePic.jpg";
 
 export default function() {
   return (
@@ -9,7 +9,7 @@ export default function() {
         className="left-column"
         style={{
           background: "url(" + profilePicture + ") no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "cover ",
           backgroundPosition: "center"
         }}
       >

@@ -32,12 +32,11 @@ const NavigationComponent = props => {
 
   return (
     <div className="nav-wrapper">
-      
-      <label for='toggle'>&#9776;</label>
-      <input type='checkbox' id='toggle'/>
+
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
 
       <div className="left-side">
-
         <div className="nav-link-wrapper">
           <NavLink exact to="/" activeClassName="nav-link-active">
             Home
@@ -48,7 +47,6 @@ const NavigationComponent = props => {
             About
           </NavLink>
         </div>
-
 
         <div className="nav-link-wrapper">
           <NavLink to="/blog" activeClassName="nav-link-active">
@@ -61,11 +59,12 @@ const NavigationComponent = props => {
           : null}
       </div>
       <div className="right-side">
-
-      {props.loggedInStatus === 'LOGGED_IN' ? <a onClick={handleSignOut}> 
-      Geo Hernandez
-      <FontAwesomeIcon icon="sign-out-alt" />
-      </a> : null}
+        {props.loggedInStatus === "LOGGED_IN" ? (
+          <a onClick={handleSignOut}>
+            Geo Hernandez
+            <FontAwesomeIcon icon="sign-out-alt" />
+          </a>
+        ) : null}
       </div>
     </div>
   );
